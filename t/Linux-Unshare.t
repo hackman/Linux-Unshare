@@ -1,8 +1,8 @@
 use strict;
 use warnings FATAL => 'all';
 
-use Test::More tests => 4;
-BEGIN { use_ok('Linux::Unshare', qw(unshare CLONE_NEWNS CLONE_FS unshare_ns)) };
+use Test::More tests => 9;
+BEGIN { use_ok('Linux::Unshare', qw(unshare CLONE_NEWNS CLONE_FS CLONE_FILES CLONE_NEWUTS CLONE_SYSVSEM CLONE_NEWIPC CLONE_NEWNET unshare_ns)) };
 
 SKIP: {
 	skip "Should be root to test mount --bind", 1 if $<;
@@ -21,3 +21,17 @@ SKIP: {
 
 is(unshare(CLONE_NEWNS), $< ? undef : 1);
 is(unshare(CLONE_FS), 1);
+is(unshare(CLONE_FILES), 1);
+is(unshare(CLONE_SYSVSEM), 1);
+SKIP: {
+	skip "Should be root to test CLONE_NEWUTS", 1 if $<;
+	is(unshare(CLONE_NEWUTS), 1);
+};
+SKIP: {
+	skip "Should be root to test CLONE_NEWIPC", 1 if $<;
+	is(unshare(CLONE_NEWIPC), 1);
+};
+SKIP: {
+	skip "Should be root to test CLONE_NEWNET", 1 if $<;
+	is(unshare(CLONE_NEWNET), 1);
+};
