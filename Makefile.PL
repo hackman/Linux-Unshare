@@ -9,7 +9,7 @@ WriteMakefile(
     PREREQ_PM         => {},
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Linux/Unshare.pm',
-       AUTHOR         => 'Boris Sukholitko <boris@>') : ()),
+       AUTHOR         => [ 'Boris Sukholitko <boris@>', 'Marian Marinov <HackMan>' ]) : ()),
     LIBS              => [''],
     DEFINE            => '',
     INC               => '-I.',

@@ -1,9 +1,10 @@
 --- #YAML:1.0
 name:               Linux-Unshare
-version:            0.03
+version:            0.04
 abstract:           Perl interface for Linux unshare system call.
 author:
     - Boris Sukholitko <boris@>
+    - Marian Marinov <HackMan>
 license:            unknown
 distribution_type:  module
 configure_requires:
