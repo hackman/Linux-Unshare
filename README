@@ -1,16 +1,16 @@
 Linux-Unshare version 0.04
 ==========================
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+  Linux::Unshare - Perl interface for Linux unshare system call.
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+
+This trivial module provides interface to the Linux unshare system call. It
+also provides the CLONE_* constants that are used to specify which kind of
+unsharing must be performed. Note that some of these are still not implemented
+in the Linux kernel, and others are still experimental.
+
+The unshare system call allows a process to 'unshare' part of the process
+context which was originally shared using clone(2).
 
 INSTALLATION
 
@@ -23,15 +23,19 @@ To install this module type the following:
 
 DEPENDENCIES
 
-This module requires these other modules and libraries:
+This module does not require any 3rd party libraries, but it does require your machine to have the <sched.h> for build.
+And also it requires fairly recent kernel to work.
 
-  blah blah blah
+BUGS AND SUGGESTIONS
+    contact me at hackman at cpan.org
+
+REPOSITORY
+    http://github.com/hackman/linux-unshare
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
 Copyright (C) 2009 by Boris Sukholitko
+Copyright (C) 2014 by Marian Marinov
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.0 or,
