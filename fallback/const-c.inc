@@ -136,20 +136,8 @@ __END__
     break;
   case 11:
     /* Names all of length 11.  */
-    /* CLONE_FILES CLONE_NEWNS */
+    /* CLONE_FILES */
     /* Offset 7 gives the best switch position.  */
-    switch (name[7]) {
-    case 'E':
-      if (memEQ(name, "CLONE_NEWNS", 11)) {
-      /*                      ^          */
-#ifdef CLONE_NEWNS
-        *iv_return = CLONE_NEWNS;
-        return PERL_constant_ISIV;
-#else
-        return PERL_constant_NOTDEF;
-#endif
-      }
-      break;
     case 'I':
       if (memEQ(name, "CLONE_FILES", 11)) {
       /*                      ^          */
@@ -168,7 +156,7 @@ __END__
     break;
   case 13:
     /* Names all of length 13.  */
-    /* CLONE_SIGHAND CLONE_SYSVSEM */
+    /* CLONE_SIGHAND CLONE_SYSVSEM CLONE_NEWNS CLONE_NEWUSER */
     /* Offset 12 gives the best switch position.  */
     switch (name[12]) {
     case 'D':
@@ -182,6 +170,17 @@ __END__
 #endif
       }
       break;
+    case 'N':
+      if (memEQ(name, "CLONE_NEWNS", 12)) {
+      /*                        ^        */
+#ifdef CLONE_NEWNS
+        *iv_return = CLONE_NEWNS;
+        return PERL_constant_ISIV;
+#else
+        return PERL_constant_NOTDEF;
+#endif
+      }
+	  break;
     case 'M':
       if (memEQ(name, "CLONE_SYSVSE", 12)) {
       /*                           M      */
@@ -193,6 +192,17 @@ __END__
 #endif
       }
       break;
+    case 'U':
+      if (memEQ(name, "CLONE_NEWUS", 12)) {
+      /*                        ^        */
+#ifdef CLONE_NEWSER
+        *iv_return = CLONE_NEWUSER;
+        return PERL_constant_ISIV;
+#else
+        return PERL_constant_NOTDEF;
+#endif
+      }
+	  break;
     }
     break;
   }
