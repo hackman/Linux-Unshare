@@ -20,7 +20,7 @@ if (eval {require ExtUtils::Constant; 1}) {
   # files to replace their "fallback" counterparts before distributing your
   # changes.
   my @names = (qw(CLONE_THREAD CLONE_FS CLONE_NEWNS CLONE_SIGHAND CLONE_VM
-	  CLONE_FILES CLONE_SYSVSEM CLONE_NEWUTS CLONE_NEWIPC CLONE_NEWNET));
+	  CLONE_FILES CLONE_SYSVSEM CLONE_NEWUTS CLONE_NEWIPC CLONE_NEWNET CLONE_NEWUSER ));
   ExtUtils::Constant::WriteConstants(
                                      NAME         => 'Linux::Unshare',
                                      NAMES        => \@names,
