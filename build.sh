@@ -3,7 +3,7 @@ cd ~/Projects/perl-containers/
 
 proj='Linux-Unshare'
 ver=$(awk '/^version:/{print $2}' $proj/META.yml)
-excludes='Makefile.old .git build.sh'
+excludes='Makefile.old .git build.sh up-version.sh'
 
 if [ -z "$ver" ]; then
 	echo "Unable to get $poj version"
