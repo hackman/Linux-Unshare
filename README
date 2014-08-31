@@ -1,4 +1,6 @@
-Linux-Unshare version 0.04
+Copyright (C) 2014 by Marian Marinov
+
+Linux-Unshare
 ==========================
 
   Linux::Unshare - Perl interface for Linux unshare system call.
