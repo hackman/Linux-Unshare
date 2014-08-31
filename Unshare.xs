@@ -11,6 +11,7 @@
 #include "const-c.inc"
 #define _GNU_SOURCE
 #include <sched.h>
+#define CLONE_CONTAINER CLONE_NEWNS|CLONE_NEWUTS|CLONE_NEWIPC|CLONE_NEWNET|CLONE_NEWPID|CLONE_NEWUSER
 
 MODULE = Linux::Unshare		PACKAGE = Linux::Unshare
 
