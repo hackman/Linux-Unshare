@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Linux-Unshare
-version:            0.04
+version:            0.05
 abstract:           Perl interface for Linux unshare system call.
 author:
     - Boris Sukholitko <boris@>
@@ -20,3 +20,6 @@ generated_by:       ExtUtils::MakeMaker version 6.55_02
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
+resources:
+    repository: https://github.com/hackman/Linux-Unshare
+    license:    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
