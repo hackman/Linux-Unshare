@@ -19,7 +19,7 @@ our %EXPORT_TAGS = ( 'clone' => [ qw(
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'clone'} }, qw(unshare unshare_ns) );
 our @EXPORT = qw( );
 
-our $VERSION = '1.00';
+our $VERSION = '1.1';
 
 sub AUTOLOAD {
     my $constname;
@@ -80,7 +80,7 @@ Marian Marinov, E<lt>hackman@cpan.orgE<gt>
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2009 by Boris Sukholitko
-Copyright (C) 2014 by Marian Marinov
+Copyright (C) 2014-2017 by Marian Marinov
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.0 or,

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Linux-Unshare
-version:            1.00
+version:            1.1
 abstract:           Perl interface for Linux unshare system call.
 author:
     - Boris Sukholitko <boris@>
@@ -12,9 +12,9 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 provides:
-    Linux::Setns:
+    Linux::Unshare:
         file: lib/Linux/Unshare.pm
-        version: 1.00
+        version: 1.1
 requires:
     perl: 5.010001
 no_index:

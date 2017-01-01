@@ -38,9 +38,9 @@
       }
    },
    "provides" : {
-      "Linux::Setns" : {
+      "Linux::Unshare" : {
          "file" : "lib/Linux/Unshare.pm",
-         "version" : "1.00"
+         "version" : "1.1"
       }
    },
    "release_status" : "stable",
@@ -52,6 +52,6 @@
          "url" : "https://github.com/hackman/Linux-Unshare"
       }
    },
-   "version" : "1.00",
+   "version" : "1.1",
    "x_serialization_backend" : "JSON::PP version 2.27203"
 }
