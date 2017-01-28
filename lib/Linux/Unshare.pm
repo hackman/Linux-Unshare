@@ -50,7 +50,7 @@ Linux::Unshare - Perl interface for Linux unshare system call.
 
   use Linux::Unshare qw(unshare :clone);
 
-  # as root ... 
+  # as root ...
   unshare(CLONE_NEWNS)
   # now your mounts will become private
 
@@ -60,7 +60,7 @@ Linux::Unshare - Perl interface for Linux unshare system call.
 
 =head1 DESCRIPTION
 
-This trivial module provides interface to the Linux unshare system call. It
+This trivial module provides an interface to the Linux unshare system call. It
 also provides the CLONE_* constants that are used to specify which kind of
 unsharing must be performed. Note that some of these are still not implemented
 in the Linux kernel, and others are still experimental.
