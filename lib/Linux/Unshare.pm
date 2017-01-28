@@ -12,9 +12,9 @@ our @ISA = qw(Exporter);
 
 # This allows declaration	use Linux::Unshare ':all';
 our %EXPORT_TAGS = ( 'clone' => [ qw(
-	CLONE_THREAD CLONE_FS CLONE_NEWNS CLONE_SIGHAND CLONE_VM CLONE_FILES CLONE_SYSVSEM
-	CLONE_CONTAINER CLONE_NEWNS CLONE_NEWUTS CLONE_NEWIPC CLONE_NEWNET CLONE_NEWPID
-	CLONE_NEWUSER CLONE_NEWCGROUP
+    CLONE_THREAD CLONE_FS CLONE_NEWNS CLONE_SIGHAND CLONE_VM CLONE_FILES CLONE_SYSVSEM
+    CLONE_CONTAINER CLONE_NEWNS CLONE_NEWUTS CLONE_NEWIPC CLONE_NEWNET CLONE_NEWPID
+    CLONE_NEWUSER CLONE_NEWCGROUP
 ) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'clone'} }, qw(unshare unshare_ns) );
 our @EXPORT = qw( );
@@ -29,8 +29,8 @@ sub AUTOLOAD {
     my ($error, $val) = constant($constname);
     if ($error) { croak $error; }
     {
-	no strict 'refs';
-	*$AUTOLOAD = sub { $val };
+        no strict 'refs';
+        *$AUTOLOAD = sub { $val };
     }
     goto &$AUTOLOAD;
 }
