@@ -6,7 +6,7 @@ ver=$(awk '/^version:/{print $2}' $proj/META.yml)
 excludes='Makefile.old .git build.sh up-version.sh'
 
 if [ -z "$ver" ]; then
-	echo "Unable to get $poj version"
+	echo "Unable to get $proj version"
 	exit 1
 else
 	echo "Building project $proj version $ver"
