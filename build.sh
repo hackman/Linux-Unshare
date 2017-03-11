@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 cd ~/Projects/perl-containers/
 
 proj='Linux-Unshare'
