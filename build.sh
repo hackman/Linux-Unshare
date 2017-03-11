@@ -8,10 +8,9 @@ excludes=( Makefile.old .git build.sh up-version.sh )
 if [ -z "$ver" ]; then
 	echo "Unable to get $proj version"
 	exit 1
-else
-	echo "Building project $proj version $ver"
 fi
 
+echo "Building project $proj version $ver"
 
 if [ ! -d $proj ]; then
 	echo "Unable to find $proj dir"
