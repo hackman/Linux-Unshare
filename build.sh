@@ -12,7 +12,7 @@ fi
 
 echo "Building project $proj version $ver"
 
-if [ ! -d $proj ]; then
+if [ ! -d "$proj" ]; then
 	echo "Unable to find $proj dir"
 	exit 2
 fi
@@ -22,9 +22,9 @@ for i in "${excludes[@]}"; do
 done
 
 if [ -f $proj-${ver}.tar.gz ]; then
-	rm -f $proj-${ver}.tar.gz
+	rm -f "$proj-${ver}.tar.gz"
 fi
 
-mv $proj ${proj}-$ver
-tar $exclude_option -czf $proj-${ver}.tar.gz ${proj}-$ver
-mv ${proj}-$ver $proj
+mv "$proj" "${proj}-$ver"
+tar "$exclude_option" -czf "$proj-${ver}.tar.gz" "${proj}-$ver"
+mv "${proj}-$ver" "$proj"
