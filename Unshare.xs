@@ -8,7 +8,6 @@
 
 #include "ppport.h"
 
-#include "const-c.inc"
 #ifndef _GNU_SOURCE
 #define _GNU_SOURCE
 #endif
@@ -35,6 +34,7 @@
 # define CLONE_NEWNET		0x40000000	/* New network namespace.  */
 #endif
 #define CLONE_CONTAINER CLONE_NEWNS|CLONE_NEWUTS|CLONE_NEWIPC|CLONE_NEWNET|CLONE_NEWPID|CLONE_NEWUSER
+#include "const-c.inc"
 
 MODULE = Linux::Unshare		PACKAGE = Linux::Unshare
 
