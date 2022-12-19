@@ -80,7 +80,7 @@ Marian Marinov, E<lt>hackman@cpan.orgE<gt>
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2009 by Boris Sukholitko
-Copyright (C) 2014-2017 by Marian Marinov
+Copyright (C) 2014-2023 by Marian Marinov
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.0 or,
