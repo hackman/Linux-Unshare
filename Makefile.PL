@@ -13,6 +13,20 @@ WriteMakefile(
     LIBS              => [''],
     DEFINE            => '',
     INC               => '-I.',
+    META_MERGE => {
+        'meta-spec' => { version => 2 },
+         resources => {
+             repository => {
+                 type => 'git',
+                 url  => 'https://github.com/hackman/Linux-Unshare.git',
+                 web  => 'https://github.com/hackman/Linux-Unshare',
+             },
+             bugtracker => {
+                 web => 'https://github.com/hackman/Linux-Unshare/issues'
+             },
+             homepage   => 'https://github.com/hackman/Linux-Unshare',
+         },
+    },
 );
 if (eval {require ExtUtils::Constant; 1}) {
   # If you edit these definitions to change the constants used by this module,
