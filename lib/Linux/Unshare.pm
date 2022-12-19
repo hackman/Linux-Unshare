@@ -19,7 +19,7 @@ our %EXPORT_TAGS = ( 'clone' => [ qw(
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'clone'} }, qw(unshare unshare_ns) );
 our @EXPORT = qw( );
 
-our $VERSION = '1.1';
+our $VERSION = '1.2';
 
 sub AUTOLOAD {
     my $constname;
