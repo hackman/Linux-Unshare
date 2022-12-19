@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/Projects/perl-containers/
+cd ~/projects/perl-containers/
 
 proj='Linux-Unshare'
 ver=$(awk '/^version:/{print $2}' $proj/META.yml)
