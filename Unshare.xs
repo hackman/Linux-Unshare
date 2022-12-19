@@ -16,6 +16,7 @@
 MODULE = Linux::Unshare		PACKAGE = Linux::Unshare
 
 INCLUDE: const-xs.inc
+PROTOTYPES: ENABLE
 
 SV * unshare(int flags)
 	CODE:
